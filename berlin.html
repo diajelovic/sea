@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Houses from Ibiza</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link href="css/common-styles.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery.slideContent.js" type="text/javascript"></script>
+	<script src="js/calendar.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('ul.gallery').slideContent({slide:'showItems'});
+            $('.showCollapse').click(function(){$(this).next().toggle();}).hover(function(){$(this).addClass('hover');},function(){$(this).removeClass('hover');});
+            $('.collapse').click(function(){this.style.display="none";});
+			calendar_form_submit('/src/getCalendar.php', 2, 'en');
+        });
+        function galleryShow(itemPath, itemDescr)
+        {
+            $('.showImage > img.bottom').attr('src', $('.showImage > img.top').attr('src')).show();
+            $(".showImage > img.top").hide().attr("src", itemPath);
+            $(".showImage > img.top").load(function()
+            {
+                $(".showImage > img.top").fadeIn("slow");
+                $(".showImage > img.bottom").fadeOut("slow");
+            });
+            $(".showImage + .description").text(itemDescr);
+        }
+    </script>
+</head>
+<body>
+    <div class="layout">
+        <div class="head">
+            <div class="siteName">Houses from Ibiza</div>
+            <div class="contacts">
+                <span class="showCollapse">Contacts</span>
+                <div class="collapse">
+                    <div class="phone"> tel: +3 <span>(460)</span> 630-94-12</div>
+                    <div class="mails">
+                        <a href="mailto:rpr@ctv.es" title="send mail to rpr@ctv.es">rpr@ctv.es</a><br/>
+                        <a href="mailto:seahouseibiza@gmail.com" title="send mail to seahouseibiza@gmail.com">seahouseibiza@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="/" title="index page"><img src="img/logo.png" alt=""/></a>
+                <div class="flags">
+                    <img src="img/england.gif" alt=""/>
+                    <a href="berlin-es.html" title="spanish version"><img src="img/spain.gif" alt=""/></a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="showImage">
+                <img class="top" src="img/berlin/berlin_1.jpg" alt=""/>
+                <img class="bottom" src="img/berlin/berlin_1.jpg" alt=""/>
+            </div>
+            <div class="description">Solarium y acceso mar</div>            
+            <ul class="gallery">
+                <li><img src="img/berlin/berlin_1.jpg" alt="Solarium y acceso mar" onmouseover="javascript: galleryShow('img/berlin/berlin_1.jpg', 'Solarium y acceso mar');"></li>
+                <li><img src="img/berlin/berlin_2.jpg" alt="Solarium" onmouseover="javascript: galleryShow('img/berlin/berlin_2.jpg', 'Solarium');"></li>
+                <li><img src="img/berlin/berlin_3.jpg" alt="Terraza Comedor" onmouseover="javascript: galleryShow('img/berlin/berlin_3.jpg', 'Terraza Comedor');"></li>
+                <li><img src="img/berlin/berlin_7.jpg" alt="Dormitorio 1" onmouseover="javascript: galleryShow('img/berlin/berlin_7.jpg', 'Dormitorio 1');"></li>
+                <li><img src="img/berlin/berlin_8.jpg" alt="Dormitorio 2" onmouseover="javascript: galleryShow('img/berlin/berlin_8.jpg', 'Dormitorio 2');"></li>
+                <li><img src="img/berlin/berlin_11.jpg" alt="Chill-Out y Solarium" onmouseover="javascript: galleryShow('img/berlin/berlin_11.jpg', 'Chill-Out y Solarium');"></li>
+                <li><img src="img/berlin/berlin_15.jpg" alt="Salón Comedor Interior" onmouseover="javascript: galleryShow('img/berlin/berlin_15.jpg', 'Salón Comedor Interior');"></li>
+                <li><img src="img/berlin/berlin_16.jpg" alt="Mirador y Comedor 1" onmouseover="javascript: galleryShow('img/berlin/berlin_16.jpg', 'Mirador y Comedor 1');"></li>
+                <li><img src="img/berlin/berlin_17.jpg" alt="Mirador y Comedor 2" onmouseover="javascript: galleryShow('img/berlin/berlin_17.jpg', 'Mirador y Comedor 2');"></li>
+            </ul>
+        </div>
+        <div class="houseInfo">
+            <h2>Berlin</h2>
+            <div class="about">
+                It is located in a privileged place in Talamanca bay, few metres from the sea. It is next to Daniela house where there is room for 4 / 5 people<br/>
+                Sitting room open to the wall surrounded dining room which overlooks the sea.<br/>
+                Terrace with BBQ area and summer dining room.<br/>
+                Solarium and access to the sea.<br/>
+                Air conditioning in all the house.<br/>
+            </div>
+            <ul class="clear">
+                <li><strong>Place:</strong> <span>Talamanca bay</span></li>
+                <li><strong>Peoples:</strong> <span>4 - 5</span></li>
+                <li><strong>Beds:</strong> <span>2 (double)</span></li>
+                <li><strong>Baths:</strong> <span>1 (with shower)</span></li>
+                <li><strong>TV:</strong> <span>Satellite television, CD player</span></li>
+                <li><strong>Kitchen:</strong> <span>Fully equipped</span></li>
+            </ul>
+            <div class="moreInfo">
+                <strong class="order"><a href="formorder.php" title="Order">Order Now</a></strong>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="showCalendar"><span class="showCollapse">show reservation callendar</span>
+        <div id="calendar" class="calendar collapse"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="prices">
+            <h2>Prices</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th width="50%">Date-range</th>
+                    <th width="20px">Price per week</th>
+                    <th width="50%">Date-range</th>
+                    <th width="20px">Price per week</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>04 April - 01 May</td>
+                    <td class="price">1190 €</td>
+                    <td>31 July - 04 September</td>
+                    <td class="price">2660 €</td>
+                </tr>
+                <tr>
+                    <td>01 May - 29 May</td>
+                    <td class="price">1488 €</td>
+                    <td>04 September - 02 October</td>
+                    <td class="price">1860 €</td>
+                </tr>
+                <tr>
+                    <td>29 May - 03 July</td>
+                    <td class="price">1860 €</td>
+                    <td>02 October - 30 October</td>
+                    <td class="price">1488 €</td>
+                </tr>
+                <tr>
+                    <td>03 July - 31 July</td>
+                    <td class="price">2329 €</td>
+                    <td>31 October - 30 November</td>
+                    <td class="price">1190 €</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="otherHousesInfo">
+            <div class="house">
+                <h2>Daniela</h2>
+                This house is situated in a priviliged area in Talamanca bay, few metres from the sea. It is next to Berlin house which has room for 4 people.
+                <a href="/daniela.html">More info</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="seaandhouse">
+            <strong>SeaAndHouse © 2010-2013</strong>
+        </div>
+    </div>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-16440227-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+</body>
+</html>

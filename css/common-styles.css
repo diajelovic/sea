@@ -1,0 +1,119 @@
+html,body {height: 100%;}
+body {background: #ececec; font-family: Arial,Helvetica,sans-serif; color: #888; font-size: 0.875em; margin: 0; padding: 0;}
+a {color: #989898;}
+a img {border: 0;}
+a:hover {text-decoration: none;}
+
+div.layout {width: 920px; margin: 0 auto; height: auto!important; min-height: 100%; height: 100%;}
+div.clear {clear: both;}
+ul.clear {list-style-image: none; list-style-type: none; padding: 0; margin: 0;}
+
+div.head {padding: 14px 14px 0 0; border-bottom: 1px solid #C7C6C6;}
+div.head div.siteName {float: left;}
+div.head div.contacts {float: right; position: relative;}
+div.head div.contacts div.collapse {display: none; border: 1px solid #000; background: #fff; padding: 10px; position: absolute; top: 18px; right: 0; cursor: pointer; width: 167px;}
+div.head div.contacts span.showCollapse {text-decoration: underline; cursor: pointer;}
+div.head div.contacts span.hover {text-decoration: none;}
+div.head div.contacts div {padding: 5px 0 0;}
+div.head div.contacts div.phone {font-size: 1.1em; color: #000;}
+div.head div.contacts div.phone span {color: #1384B0; font-size: 1.1em;}
+div.head div.logo {clear: both; padding: 45px 0 5px; height: 105px;}
+div.head div.logo img {float: left; height: 105px;}
+div.head div.logo .flags {float: right; padding: 85px 0 0;}
+div.head div.logo .flags img {width: 20px; height: 13px; margin: 0 5px;}
+
+/*���������� ���������� � �����*/
+div.mainInfo {position: relative; padding: 10px 0 25px;}
+div.mainInfo img {width: 523px; height: 354px;}
+div.mainInfo div.ui-tabs-hide {display: none;}
+div.mainInfo div.housePhotos ul {display: none;}
+div.mainInfo div.houseInfo {float: none; position: absolute; top: 10px; right: 0; margin: 0; height: 299px;}
+div.mainInfo div.moreInfo a {font-size: 12px; position: relative; top: 15px; left: 6px;}
+
+/*���������� ���� ����� �� �������*/
+div#housesTabs ul.tabs {position: absolute; top: 10px; left: 0px; z-index: 2;}
+div#housesTabs ul.tabs li {float: left;}
+div#housesTabs ul.tabs a {background: #000; color: #fff; display: block; text-decoration: none; padding: 2px 5px; outline: none;}
+div#housesTabs ul.tabs a:hover,
+div#housesTabs ul.tabs li.ui-tabs-selected a {background: #fff; color: #000;}
+
+/*���������� ������ �������� �����*/
+div.housesInfo {padding: 0 0 75px;}
+div.housesInfo div.house {float: left; width: 40%; margin: 0 2% 2%; padding: 0 3% 7%; background: #fff; position: relative;}
+div.housesInfo h2 {border-bottom: 1px solid #CACACA; color: #000000; font-size: 20px; font-weight: normal; margin-bottom: 21px; padding: 14px 0 10px; margin: 0 0 10px;}
+div.housesInfo a {display: block; color: #000; margin: 5px 0 0; position: absolute ;bottom: 15px; font-size: 0.9em;}
+
+/*���������� ������� �� ��������� ���������*/
+div.gallery  {width: 523px; float: left; padding: 10px 0 0;}
+div.gallery  div.showImage {height: 354px; position: relative; width: 523px;}
+div.gallery  div.showImage img {width: 523px; height: 354px; z-index: 2; position: absolute; top: 0; left: 0;}
+div.gallery  div.showImage img.bottom {z-index: 1;}
+div.gallery  div.description {text-align: center; padding: 5px 0;}
+
+/*���������� ���������� ����� �� ���������� ���������*/
+div.houseInfo {padding:35px 50px 20px 45px; height:429px; width: 302px; background: #000; float: left; margin: 10px 0 0; position: relative;}
+div.houseInfo h2 {margin: 0 0 10px; color: #fff; border-bottom: 1px solid #fff;}
+div.houseInfo ul {padding: 15px 0 0;}
+div.houseInfo li {border-bottom: 1px solid #2D2D2D; margin-bottom: 2px; padding: 2px 0; font-size: 1.1em; overflow: hidden;}
+div.houseInfo li strong {color: #FFFFFF; float: left; padding-left: 6px;}
+div.houseInfo li span {float: right;}
+div.houseInfo strong.order, 
+div.houseInfo strong.order a {color: #FFFFFF; float: right; font-size: 25px; text-decoration: none;}
+div.houseInfo strong.order a:hover {color: #ccc;} 
+div.houseInfo div.moreInfo {position: absolute; bottom: 35px; width: 302px;}
+
+div.prices {background-color: #FFFFFF; padding:0 3% 2%;}
+div.prices h2 {color: #000000; font-size: 20px; font-weight: normal; padding: 14px 0 10px; margin: 0;}
+div.prices table {width: 100%; border-collapse: collapse;}
+div.prices td, div.prices th {border: 1px solid #CACACA; padding: 5px 10px; white-space: nowrap;}
+div.prices th {color: #000;}
+div.prices .price {color: #1384B0;}
+
+/*���������� ������ �������� ������ �����*/
+div.otherHousesInfo {clear: both; padding: 20px 0 95px;}
+div.otherHousesInfo div.house {padding: 0 3% 7%;; background-color: #fff; position: relative;}
+div.otherHousesInfo h2 {border-bottom: 1px solid #CACACA; color: #000000; font-size: 20px; font-weight: normal; padding: 14px 0 10px; margin: 0 0 10px;}
+div.otherHousesInfo a {display: block; color: #000; margin: 5px 0 0; position: absolute ;bottom: 15px; font-size: 0.9em;}
+
+/*���������� ���������*/
+div.showCalendar {cursor:pointer; text-align: right; margin: 20px 0px;}
+div.showCalendar span.showCollapse {margin: 0 20px 0 0; text-decoration: underline;}
+div.showCalendar span.hover {text-decoration: none;}
+div.calendar {border: 1px solid #000; margin: 10px auto; width: 848px; display: none;}
+div.calendar div.ui-datepicker {border: 1px solid #000; float: left; height: 175px; padding:10px; background-color: #fff; width: 190px;}
+
+/*����� ������*/
+form#orderForm {width: 650px; margin: 20px 70px; padding: 0 0 75px;}
+form#orderForm ul.errorSet {background: url(images/errorSet.jpg) no-repeat 10px center; display: none;}
+form#orderForm ul.messageSet {background: url(images/messageSet.jpg) no-repeat 10px center; display: none;}
+form#orderForm div.sets li {margin: 10px 0;}
+form#orderForm div.sets ul {padding: 0 0 0 120px; background-color: #fff; border: 1px solid #c7c6c6; min-height: 70px; height: auto !important; height: 70px;}
+form#orderForm div.column {width: 325px; float: left;}
+form#orderForm div.control {clear: both; padding: 10px 0 0; position: relative;}
+form#orderForm div.button {padding: 20px 0; height: 50px;}
+form#orderForm div.button input {float: right; width: auto; padding: 2px 5px; cursor: pointer;}
+form#orderForm div.button input.hover {background-color: #c7c6c6; color: #fff;} 
+form#orderForm input {background: #fff; border: 1px solid #c7c6c6; width: 185px; float: left;}
+form#orderForm label {width: 115px; padding: 0 10px; display: block; float: left; margin: 0 0 5px;}
+form#orderForm textarea {width: 320px; background: #fff; border: 1px solid #c7c6c6; height: 102px;}
+form#orderForm select {width: 187px; background: #fff; border: 1px solid #c7c6c6;}
+form#orderForm img.ui-datepicker-trigger {cursor: pointer; position: absolute; top: 12px; right: 8px;}
+form#orderForm div#recaptcha_widget_div {float: right;} 
+
+/*���������� ������ ���������*/
+.slideContainer {width: 100%;}
+.slideItemsContainer {width: 100%; position: relative; overflow: hidden;}
+.container-withButtons {margin: 0 auto; float: left;}
+.slideContent {position: relative; margin: 0; padding: 0; list-style-image: none; list-style-type: none;}
+.slideContent img {width: 148px; height: 100px; padding: 0 5px;}
+.slideContent li {float: left;}
+.slideRight, .slideLeft{width: 24px; float: left;}
+.slideRight div, .slideLeft div {width: 20px; height: 20px; margin: 40px 0 40px 4px; cursor: pointer;}
+.slideRight div {margin: 40px 5px 40px 0;}
+.slideRight div {background: url(buttons.gif);}
+.slideLeft div {background: url(buttons.gif) -20px 0;}
+
+/*���������� ������*/
+div.footer {background-color: #4F4F4F; height: 50px; margin-top: -75px; padding: 25px 0 0;}
+div.footer div.seaandhouse {background-color: #000; line-height: 26px; padding: 12px; color: #fff;}
+div.footer div.seaandhouse strong {width: 820px; margin: 0 auto; display: block; font-weight: normal;}

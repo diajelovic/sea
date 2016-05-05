@@ -1,0 +1,165 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+    <title>Casas de Ibiza</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link href="css/common-styles.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery.slideContent.js" type="text/javascript"></script>
+	<script src="js/calendar.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('ul.gallery').slideContent({slide:'showItems'});
+            $('.showCollapse').click(function(){$(this).next().toggle();}).hover(function(){$(this).addClass('hover');},function(){$(this).removeClass('hover');});
+            $('.collapse').click(function(){this.style.display="none";});
+			calendar_form_submit('/src/getCalendar.php', 1, 'es');
+        });
+        function galleryShow(itemPath, itemDescr)
+        {
+            $('.showImage > img.bottom').attr('src', $('.showImage > img.top').attr('src')).show();
+            $(".showImage > img.top").hide().attr("src", itemPath);
+            $(".showImage > img.top").load(function()
+            {
+                $(".showImage > img.top").fadeIn("slow");
+                $(".showImage > img.bottom").fadeOut("slow");
+            });
+            $(".showImage + .description").text(itemDescr);
+        }
+    </script>
+</head>
+<body>
+    <div class="layout">
+        <div class="head">
+            <div class="siteName">Casas de Ibiza</div>
+            <div class="contacts">
+                <span class="showCollapse">Contacto</span>
+                <div class="collapse">
+                    <div class="phone"> tel: +3 <span>(460)</span> 630-94-12</div>
+                    <div class="mails">
+                        <a href="mailto:rpr@ctv.es" title="send mail to rpr@ctv.es">rpr@ctv.es</a><br/>
+                        <a href="mailto:seahouseibiza@gmail.com" title="send mail to seahouseibiza@gmail.com">seahouseibiza@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="/index-es.html" title="index page"><img src="img/logo.png" alt=""/></a>
+                <div class="flags">
+                    <a href="daniela.html" title="english version"><img src="img/england.gif" alt=""/></a>
+                    <img src="img/spain.gif" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="showImage">
+                <img class="top" src="img/daniela/daniela_3.jpg" alt=""/>
+                <img class="bottom" src="img/daniela/daniela_3.jpg" alt=""/>
+            </div>
+            <div class="description">Dormitorio 1</div>            
+            <ul class="gallery">
+                <li><img src="img/daniela/daniela_3.jpg" alt="Dormitorio 1" onmouseover="javascript: galleryShow('img/daniela/daniela_3.jpg', 'Dormitorio 1');"></li>
+                <li><img src="img/daniela/daniela_4.jpg" alt="Dormitorio 2" onmouseover="javascript: galleryShow('img/daniela/daniela_4.jpg', 'Dormitorio 2');"></li>
+                <li><img src="img/daniela/daniela_6.jpg" alt="Salón" onmouseover="javascript: galleryShow('img/daniela/daniela_6.jpg', 'Salón');"></li>
+                <li><img src="img/daniela/daniela_7.jpg" alt="Porche Comedor" onmouseover="javascript: galleryShow('img/daniela/daniela_7.jpg', 'Porche Comedor');"></li>
+                <li><img src="img/daniela/daniela_8.jpg" alt="Salón, Cocina" onmouseover="javascript: galleryShow('img/daniela/daniela_8.jpg', 'Salón, Cocina');"></li>
+                <li><img src="img/daniela/daniela_10.jpg" alt="Terraza verde" onmouseover="javascript: galleryShow('img/daniela/daniela_10.jpg', 'Terraza verde');"></li>
+                <li><img src="img/daniela/daniela_11.jpg" alt="Dormitorio 3" onmouseover="javascript: galleryShow('img/daniela/daniela_11.jpg', 'Dormitorio 3');"></li>
+                <li><img src="img/daniela/daniela_12.jpg" alt="Patio Trasero" onmouseover="javascript: galleryShow('img/daniela/daniela_12.jpg', 'Patio Trasero');"></li>
+                <li><img src="img/daniela/daniela_13.jpg" alt="Solarium  Terraza" onmouseover="javascript: galleryShow('img/daniela/daniela_13.jpg', 'Solarium  Terraza');"></li>
+                <li><img src="img/daniela/daniela_14.jpg" alt="Chillout Terraza" onmouseover="javascript: galleryShow('img/daniela/daniela_14.jpg', 'Chillout Terraza');"></li>
+            </ul>
+        </div>
+        <div class="houseInfo">
+            <h2>Daniela</h2>
+            <div class="about">
+                Esta ubicada en un lugar privilegiado de la bahía de Talamanca, a pocos metros del mar. A su lado esta Casa Berlín con capacidad para 4 personas.<br/>
+                Salón con cocina americana equipada.<br/>
+                Acceso al mar . Aire acondicionado en toda la casa.
+            </div>
+            <ul class="clear">
+                <li><strong>Lugar:</strong> <span>La bahía de Talamanca</span></li>
+                <li><strong>Personas:</strong> <span>4</span></li>
+                <li><strong>Habitaciones:</strong> <span>2 (dobles)</span></li>
+                <li><strong>Baño :</strong> <span>1 (con ducha)</span></li>
+                <li><strong>TV:</strong> <span>Televisión española, lector CD</span></li>
+                <li><strong>Cocina:</strong> <span>Americana</span></li>
+            </ul>
+            <div class="moreInfo">
+                <strong class="order"><a href="formorder-es.php" title="Encargar">Encargar</a></strong>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="showCalendar"><span class="showCollapse">show reservation callendar</span>
+        <div id="calendar" class="calendar collapse"></div>
+        </div>
+        <div class="prices">
+            <h2>Precias</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th width="50%">Date-range</th>
+                    <th width="20px">Precio por semana</th>
+                    <th width="50%">Date-range</th>
+                    <th width="20px">Precio por semana</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>04 Abril - 01 Mayo</td>
+                    <td class="price">1537 €</td>
+                    <td>31 Julio - 04 Septiembre</td>
+                    <td class="price">3150 €</td>
+                </tr>
+                <tr>
+                    <td>01 Mayo - 29 Mayo</td>
+                    <td class="price">1921 €</td>
+                    <td>04 Septiembre - 02 Octubre</td>
+                    <td class="price">2401 €</td>
+                </tr>
+                <tr>
+                    <td>29 Mayo - 03 Julio</td>
+                    <td class="price">2401 €</td>
+                    <td>02 Octubre - 30 Octubre</td>
+                    <td class="price">1921 €</td>
+                </tr>
+                <tr>
+                    <td>03 Julio - 31 Julio</td>
+                    <td class="price">2800 €</td>
+                    <td>31 Octubre - 30 Noviembre</td>
+                    <td class="price">1537 €</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="otherHousesInfo">
+            <div class="house">
+                <h2>Berlin</h2>
+                Esta ubicada en un lugar privilegiado de la bahía de Talamanca, a pocos metros del mar. A su lado esta Casa Daniela con capacidad para 4/5 personas.
+                <a href="/berlin-es.html">More info</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="seaandhouse">
+            <strong>SeaAndHouse © 2010-2013</strong>
+        </div>
+    </div>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-16440227-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+</body>
+</html>
