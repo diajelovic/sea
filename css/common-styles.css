@@ -5,6 +5,7 @@ a img {border: 0;}
 a:hover {text-decoration: none;}
 
 div.layout {width: 920px; margin: 0 auto; height: auto!important; min-height: 100%; height: 100%;}
+div.layout .content {padding-bottom: 70px;}
 div.clear {clear: both;}
 ul.clear {list-style-image: none; list-style-type: none; padding: 0; margin: 0;}
 
@@ -26,21 +27,28 @@ div.head div.logo .flags img {width: 20px; height: 13px; margin: 0 5px;}
 div.mainInfo {position: relative; padding: 10px 0 25px;}
 div.mainInfo img {width: 523px; height: 354px;}
 div.mainInfo div.ui-tabs-hide {display: none;}
-div.mainInfo div.housePhotos ul {display: none;}
 div.mainInfo div.houseInfo {float: none; position: absolute; top: 10px; right: 0; margin: 0; height: 299px;}
 div.mainInfo div.moreInfo a {font-size: 12px; position: relative; top: 15px; left: 6px;}
 
+div.mainInfo .housePhotos {overflow: hidden; height: 354px; position: relative;}
+div.mainInfo .housePhotos img {position: absolute; top: 0; left: 0; display: none;}
+div.mainInfo .housePhotos img.current {z-index: 10; display: block;}
+
 /*���������� ���� ����� �� �������*/
-div#housesTabs ul.tabs {position: absolute; top: 10px; left: 0px; z-index: 2;}
+div#housesTabs ul.tabs {position: absolute; top: 10px; left: 0px; z-index: 2; z-index: 20;}
 div#housesTabs ul.tabs li {float: left;}
 div#housesTabs ul.tabs a {background: #000; color: #fff; display: block; text-decoration: none; padding: 2px 5px; outline: none;}
 div#housesTabs ul.tabs a:hover,
 div#housesTabs ul.tabs li.ui-tabs-selected a {background: #fff; color: #000;}
 
 /*���������� ������ �������� �����*/
-div.housesInfo {padding: 0 0 75px;}
-div.housesInfo div.house {float: left; width: 40%; margin: 0 2% 2%; padding: 0 3% 7%; background: #fff; position: relative;}
+div.housesInfo { overflow: hidden; position: relative;}
+div.housesInfo div.bg {position: absolute; top: 0; bottom: 20px; width: 43%; left: 0; background: #fff; padding: 0 3% 20px;}
+div.housesInfo div.bg.rightBlock {right: 0; left: auto;}
+div.housesInfo div.house {float: left; width: 43%; padding: 0 3% 20px; position: relative; margin-bottom: 20px; min-height: 250px}
+div.housesInfo div.house.rightBlock {float: right;} 
 div.housesInfo h2 {border-bottom: 1px solid #CACACA; color: #000000; font-size: 20px; font-weight: normal; margin-bottom: 21px; padding: 14px 0 10px; margin: 0 0 10px;}
+div.housesInfo h2 a {position: static; text-decoration: none;}
 div.housesInfo a {display: block; color: #000; margin: 5px 0 0; position: absolute ;bottom: 15px; font-size: 0.9em;}
 
 /*���������� ������� �� ��������� ���������*/
